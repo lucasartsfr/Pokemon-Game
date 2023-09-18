@@ -1,0 +1,175 @@
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="assets/css/gameboy.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>CVémon - Pires LUCAS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="gameboy" id="GameBoy">
+  
+        <div class="screen-area">
+          
+          <div class="power">
+            <div class="indicator">
+              <div class="led"></div>
+            </div>
+          </div>
+    
+          <!-- SCREEN -->
+            <div class="container">
+            <!-- OVERLAY -->
+            <div class="transition"></div>
+        
+        
+            <!-- FIGHT -->
+            <div class="FightBox">
+                   
+                <div class="FightPv">
+                    <h3 class="FightName" id="enemyName">Draggle</h3>
+                    <div class="FightBar">
+                        <div class="FightBarColor" id="enemyBar"></div>
+                    </div>
+                </div>
+        
+                <div class="FightPv Me">
+                    <h3 class="FightName" id="myName"></h3>
+                    <div class="FightBar">
+                        <div class="FightBarColor" id="myBar"></div>
+                    </div>
+                </div>
+                
+                <div class="FightContainer">
+                </div>
+        
+            </div>
+        
+            <!-- CANVAS -->
+            <canvas></canvas>
+        
+            <!-- MESSAGE -->
+            <div class="MessageContainer"></div>
+        
+            </div>
+          
+          <div class="label">
+            <div class="title"> </div>
+            <div class="subtitle">
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="nintendo"> </div>
+        
+        <div class="controls">
+          <div class="dpad">
+            <div class="up" id="ArrowUp"></div>
+            <div class="right"  id="ArrowRight"></div>
+            <div class="down"  id="ArrowDown"></div>
+            <div class="left"  id="ArrowLeft"></div>
+            <div class="middle"></div>
+          </div>
+          <div class="a-b">
+            <div class="b">B</div>
+            <div class="a" id="Enter">A</div>
+          </div>
+        </div>
+        
+        <div class="start-select">
+          <div class="select"> </div>
+          <div class="start"> </div>
+        </div>
+        
+        <div class="speaker">
+          <div class="dot placeholder"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot placeholder"></div>
+          
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+      
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+      
+          <div class="dot placeholder"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot closed"></div>
+          <div class="dot open"></div>
+          <div class="dot placeholder"></div>
+        </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/audio.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/attackList.js"></script>
+    <script src="assets/js/eventArea.js"></script>
+    <script src="assets/js/class.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/battle.js"></script>
+    <script src="assets/js/event.js"></script>
+</body>
+
+
+
+  
